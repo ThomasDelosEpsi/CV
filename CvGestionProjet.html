@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Thomas Delos - Chef de Projet IT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        
+        /* Conteneur dimensionné pour correspondre exactement à du A4 sur grand écran */
+        @media screen and (min-width: 768px) {
+            .page-container {
+                width: 210mm;
+                min-height: 297mm;
+            }
+        }
+
+        /* Styles ultra-stricts pour l'impression (1 SEULE PAGE A4, Taille 100%) */
+        @page { size: A4 portrait; margin: 0; }
+        
+        @media print {
+            body { 
+                background-color: white; 
+                margin: 0; 
+                padding: 0; 
+                -webkit-print-color-adjust: exact; 
+                print-color-adjust: exact;
+            }
+            .no-print { display: none !important; }
+            
+            .page-container { 
+                box-shadow: none !important; 
+                margin: 0 !important; 
+                width: 210mm !important; 
+                height: 297mm !important; /* Force EXACTEMENT la hauteur d'un A4 */
+                max-height: 297mm !important;
+                overflow: hidden !important; /* Interdit formellement le débordement sur une 2e page */
+                display: flex !important;
+                flex-direction: row !important;
+            }
+            /* Force les colonnes à s'étirer jusqu'en bas */
+            .page-container > aside {
+                width: 33.333333% !important;
+                height: 297mm !important;
+                flex-shrink: 0 !important;
+            }
+            .page-container > main {
+                width: 66.666667% !important;
+                height: 297mm !important;
+                flex-shrink: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased py-6 print:py-0">
+
+    <!-- Bouton pour imprimer / sauvegarder en PDF -->
+    <div class="max-w-5xl mx-auto mb-4 text-right no-print px-4">
+        <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow transition duration-300 flex items-center inline-flex">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+            Sauvegarder en PDF
+        </button>
+        <p class="text-sm text-gray-500 mt-2 font-semibold">⚠️ Attention lors de l'impression : mettez <span class="text-blue-600">Marges = "Aucune"</span> et cochez "Graphiques d'arrière-plan".</p>
+    </div>
+
+    <!-- Conteneur principal du CV -->
+    <div class="page-container mx-auto bg-white shadow-2xl flex flex-col md:flex-row relative">
+        
+        <!-- Colonne de Gauche (Sidebar) -->
+        <aside class="w-full md:w-1/3 bg-slate-900 text-white py-4 px-4 flex flex-col">
+            
+            <!-- En-tête Sidebar -->
+            <div class="text-center mb-2">
+                <!-- PHOTO : Augmentation de la taille de w-16 h-16 vers w-24 h-24 -->
+                <div class="w-24 h-24 mx-auto bg-slate-700 rounded-full border-4 border-slate-600 flex items-center justify-center text-3xl font-bold mb-1 overflow-hidden">
+                    <img src="Profil.jpg" alt="Photo de Thomas Delos" class="w-full h-full object-cover">
+                </div>
+                <h2 class="text-xl font-bold tracking-wider mb-0.5 mt-1">THOMAS</h2>
+                <h2 class="text-xl font-bold tracking-wider text-blue-400">DELOS</h2>
+            </div>
+
+            <!-- Coordonnées -->
+            <div class="mb-2.5 space-y-1 text-sm">
+                <h3 class="text-base font-semibold border-b border-slate-700 pb-1 mb-1.5 tracking-widest text-slate-300">CONTACT</h3>
+                <div class="flex items-center">
+                    <svg class="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <span class="truncate">thomas.delos36@gmail.com</span>
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    <span>06 51 02 06 50</span>
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <span>Carvin (62220)</span>
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span>Permis B - Véhiculé</span>
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <a href="https://linkedin.com/in/thomas-delos-a33692199/" target="_blank" class="hover:text-blue-300 truncate">/in/thomas-delos</a>
+                </div>
+            </div>
+
+            <!-- Compétences -->
+            <div class="mb-2.5">
+                <h3 class="text-base font-semibold border-b border-slate-700 pb-1 mb-1.5 tracking-widest text-slate-300">COMPÉTENCES</h3>
+                
+                <div class="mb-2">
+                    <h4 class="text-xs font-bold text-blue-400 mb-0.5 uppercase">Gestion de Projet</h4>
+                    <ul class="text-[13.5px] space-y-0.5 text-slate-300">
+                        <li>• Suivi de KPI & Calcul de ROI</li>
+                        <li>• Méthodologie Agile & Risques</li>
+                        <li>• Phase de découverte</li>
+                        <li>• Contacts métiers</li>
+                        <li>• Gestion d'Appels d'Offres (RFP)</li>
+                    </ul>
+                </div>
+                
+                <div class="mb-2">
+                    <h4 class="text-xs font-bold text-blue-400 mb-0.5 uppercase">IA & Automatisation</h4>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="bg-slate-800 border border-slate-600 px-2 py-0.5 text-[11px] rounded">n8n</span>
+                        <span class="bg-slate-800 border border-slate-600 px-2 py-0.5 text-[11px] rounded">UiPath</span>
+                        <span class="bg-slate-800 border border-slate-600 px-2 py-0.5 text-[11px] rounded">RPA</span>
+                        <span class="bg-slate-800 border border-slate-600 px-2 py-0.5 text-[11px] rounded">LLM locaux</span>
+                        <span class="bg-slate-800 border border-slate-600 px-2 py-0.5 text-[11px] rounded">Agents RAG</span>
+                        <span class="bg-slate-800 border border-slate-600 px-2 py-0.5 text-[11px] rounded">ABBYY</span>
+                    </div>
+                </div>
+
+                <div class="mb-1.5">
+                    <h4 class="text-xs font-bold text-blue-400 mb-0.5 uppercase">Développement & Data</h4>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="bg-slate-800 border border-slate-600 px-2 py-0.5 text-[11px] rounded">Python</span>
+                        <span class="bg-slate-800 border border-slate-600 px-2 py-0.5 text-[11px] rounded">C# ASP.NET</span>
+                        <span class="bg-slate-800 border border-slate-600 px-2 py-0.5 text-[11px] rounded">PHP / JS</span>
+                        <span class="bg-slate-800 border border-slate-600 px-2 py-0.5 text-[11px] rounded">React.js</span>
+                        <span class="bg-slate-800 border border-slate-600 px-2 py-0.5 text-[11px] rounded">PostgreSQL</span>
+                        <span class="bg-slate-800 border border-slate-600 px-2 py-0.5 text-[11px] rounded">MongoDB</span>
+                        <span class="bg-slate-800 border border-slate-600 px-2 py-0.5 text-[11px] rounded">Supabase</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Langues -->
+            <div class="mb-3">
+                <h3 class="text-base font-semibold border-b border-slate-700 pb-1 mb-1.5 tracking-widest text-slate-300">LANGUES</h3>
+                <div class="text-[13.5px] space-y-1">
+                    <div class="flex justify-between"><span>Anglais</span><span class="text-blue-400 font-semibold">B2</span></div>
+                    <div class="flex justify-between"><span>Espagnol</span><span class="text-slate-400">B1</span></div>
+                </div>
+            </div>
+
+            <!-- Formations -->
+            <div class="flex-grow">
+                <h3 class="text-base font-semibold border-b border-slate-700 pb-1 mb-2 tracking-widest text-slate-300">FORMATIONS</h3>
+                <div class="space-y-2 text-[13.5px] relative border-l-2 border-slate-700 ml-2">
+                    <div class="relative pl-4">
+                        <div class="absolute w-3 h-3 bg-blue-500 rounded-full -left-[7px] top-1.5 ring-4 ring-slate-900"></div>
+                        <p class="font-bold text-white leading-tight">MSC 2 Expert Informatique & SI</p>
+                        <p class="text-slate-400 text-[11px] mt-0.5">2024 - 2026</p>
+                    </div>
+                    <div class="relative pl-4">
+                        <div class="absolute w-3 h-3 bg-blue-500 rounded-full -left-[7px] top-1.5 ring-4 ring-slate-900"></div>
+                        <p class="font-bold text-white leading-tight">Bachelor DEVOPS</p>
+                        <p class="text-slate-300 text-[12px]">EPSI Arras</p>
+                        <p class="text-slate-400 text-[11px] mt-0.5">2023 - 2024</p>
+                    </div>
+                    <div class="relative pl-4">
+                        <div class="absolute w-3 h-3 bg-blue-500 rounded-full -left-[7px] top-1.5 ring-4 ring-slate-900"></div>
+                        <p class="font-bold text-white leading-tight">BTS SIO option SLAM</p>
+                        <p class="text-slate-300 text-[12px]">EPSI Arras</p>
+                        <p class="text-slate-400 text-[11px] mt-0.5">2021 - 2023</p>
+                    </div>
+                    <div class="relative pl-4">
+                        <div class="absolute w-3 h-3 bg-blue-500 rounded-full -left-[7px] top-1.5 ring-4 ring-slate-900"></div>
+                        <p class="font-bold text-white leading-tight">1ère année DUT STID</p>
+                        <p class="text-slate-300 text-[12px]">Roubaix</p>
+                        <p class="text-slate-400 text-[11px] mt-0.5">2019 - 2021</p>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- Colonne de Droite (Main Content) -->
+        <main class="w-full md:w-2/3 py-4 px-6 bg-white flex flex-col justify-between">
+            
+            <!-- Titre & Accroche -->
+            <div class="mb-2">
+                <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-1 uppercase tracking-wide">
+                    Chef de Projet IT <br>
+                    <span class="text-blue-600 text-xl md:text-2xl">IA & Automatisation</span>
+                </h1>
+                <div class="w-12 h-1 bg-blue-600 mb-1.5"></div>
+                <p class="text-gray-600 text-[13px] leading-snug text-justify">
+                    Actuellement en MSC 2 Expert informatique et système d'information, je suis passionné par l'Intelligence Artificielle et l'automatisation. Fort de mon expérience chez Lyreco où je pilote des projets RPA de bout en bout, je souhaite mettre ma double compétence technique et managériale au service d'une équipe pour concevoir et mener à bien des projets innovants.
+                </p>
+            </div>
+
+            <!-- Expériences Professionnelles -->
+            <div class="mb-2">
+                <h3 class="text-lg font-bold text-gray-900 mb-1.5 flex items-center uppercase tracking-wider">
+                    <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    Expériences Professionnelles
+                </h3>
+
+                <!-- Expérience 1 -->
+                <div class="mb-2.5 relative pl-4 border-l-2 border-blue-100">
+                    <div class="absolute w-3 h-3 bg-blue-600 rounded-full -left-[7px] top-1"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
+                        <h4 class="text-base font-bold text-gray-900">Alternant Chef de Projet RPA & IA</h4>
+                        <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full mt-1 md:mt-0">Sept 2023 - Sept 2026</span>
+                    </div>
+                    <p class="text-[13px] font-semibold text-gray-700 mb-1">Lyreco Management</p>
+                    <ul class="text-gray-600 space-y-0.5 text-[13px]">
+                        <li class="flex items-start">
+                            <svg class="w-3.5 h-3.5 text-blue-500 mr-1.5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span class="leading-snug"><strong class="text-gray-800">Appel d'offres (RFP) :</strong> Participation à un appel d'offres OCR avec phase de découverte et rédaction du cahier des charges.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-3.5 h-3.5 text-blue-500 mr-1.5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span class="leading-snug"><strong class="text-gray-800">Gestion de projet :</strong> Prise de contact Business, gestion et coordination des équipes, analyse des risques, suivi des KPI et calcul du ROI.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-3.5 h-3.5 text-blue-500 mr-1.5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span class="leading-snug"><strong class="text-gray-800">Intelligence Artificielle :</strong> Création de POC Chatbot grâce à des agents RAG et Agent Manager via n8n en utilisant des LLM locaux.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-3.5 h-3.5 text-blue-500 mr-1.5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span class="leading-snug"><strong class="text-gray-800">Automatisation (RPA) :</strong> Développement de processus pour optimiser les tâches métier répétitives et chronophages.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-3.5 h-3.5 text-blue-500 mr-1.5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span class="leading-snug"><strong class="text-gray-800">Développement Web :</strong> Conception d'une plateforme ToolBox avec création d'un OIDP pour gérer le SSO.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Expérience 2 -->
+                <div class="mb-2.5 relative pl-4 border-l-2 border-gray-200">
+                    <div class="absolute w-2.5 h-2.5 bg-gray-300 rounded-full -left-[6px] top-1.5"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
+                        <h4 class="text-base font-bold text-gray-800">Stage - Développeur Web</h4>
+                        <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full mt-1 md:mt-0">Déc 2022 - Fév 2023</span>
+                    </div>
+                    <p class="text-[13px] font-semibold text-gray-700 mb-0.5">2s-global</p>
+                    <ul class="text-gray-600 space-y-0.5 text-[13px] list-disc list-inside ml-1">
+                        <li>Refonte technique de site Web : migration de l'HTML/CSS/JS vers PHP.</li>
+                        <li>Conception et développement du site Web pour la Holding.</li>
+                        <li>Mise en place et configuration d'un blog sous WordPress.</li>
+                    </ul>
+                </div>
+
+                <!-- Expérience 3 -->
+                <div class="relative pl-4 border-l-2 border-gray-200">
+                    <div class="absolute w-2.5 h-2.5 bg-gray-300 rounded-full -left-[6px] top-1.5"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
+                        <h4 class="text-base font-bold text-gray-800">Stage - Développeur C#</h4>
+                        <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full mt-1 md:mt-0">Mai 2022 - Juin 2022</span>
+                    </div>
+                    <p class="text-[13px] font-semibold text-gray-700 mb-0.5">IDKIDS</p>
+                    <ul class="text-gray-600 space-y-0.5 text-[13px] list-disc list-inside ml-1">
+                        <li>Analyse et respect rigoureux du cahier des charges métier.</li>
+                        <li>Conception d'une FAQ dynamique en C# ASP.NET selon l'architecture MVC.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Projets Personnels -->
+            <div class="mb-2">
+                <h3 class="text-lg font-bold text-gray-900 mb-1.5 flex items-center uppercase tracking-wider">
+                    <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                    Projets Personnels & Tech
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <!-- Projet 1 -->
+                    <div class="bg-gray-50 border border-gray-200 rounded-lg p-2 hover:shadow-md transition duration-300">
+                        <h4 class="font-bold text-sm text-blue-700 mb-1">IA Agent Gestionnaire Airbnb</h4>
+                        <p class="text-[12px] text-gray-600 leading-snug">
+                            Création d'un agent IA pour gérer les réservations. L'outil analyse le contexte des messages pour préparer une réponse automatique et gère la logistique.
+                        </p>
+                    </div>
+                    <!-- Projet 2 -->
+                    <div class="bg-gray-50 border border-gray-200 rounded-lg p-2 hover:shadow-md transition duration-300">
+                        <h4 class="font-bold text-sm text-blue-700 mb-1">IA Super Mario (Lua)</h4>
+                        <p class="text-[12px] text-gray-600 leading-snug">
+                            Conception algorithmique et développement d'une petite Intelligence Artificielle capable de jouer de manière autonome à Super Mario World.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Centres d'intérêt -->
+            <div>
+                <h3 class="text-lg font-bold text-gray-900 mb-1.5 flex items-center uppercase tracking-wider">
+                    <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Centres d'intérêt
+                </h3>
+                <div class="flex flex-col space-y-1 text-[13px] text-gray-600">
+                    <p class="leading-snug">
+                        <strong class="text-gray-800">Basket-ball (11 ans en club) :</strong> Fort esprit d'équipe, goût de l'effort collectif et capacité à coordonner les actions pour atteindre un objectif commun.
+                    </p>
+                    <p class="leading-snug">
+                        <strong class="text-gray-800">Jeux de stratégie :</strong> Attrait pour la résolution de problèmes complexes, la réflexion analytique et l'anticipation pour trouver la meilleure des solutions.
+                    </p>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
